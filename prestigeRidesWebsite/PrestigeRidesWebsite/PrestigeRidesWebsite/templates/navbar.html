@@ -1,0 +1,10 @@
+<div>
+    {% url 'index' as index_url %}
+    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'index' %}">Home</a></span>
+    {% url 'aboutUs' as aboutUs_url %}
+    <span><a href="{% url 'aboutUs' %}">About Us</a></span>
+    {% url 'brands' as brands_url %}
+    <span><a href="{% url 'brands' %}">Brands</a></span>
+    {% url 'contactUs' as contactUs_url %}
+    <span><a href="{% url 'contactUs' %}">Contact Us</a></span>
+</div>

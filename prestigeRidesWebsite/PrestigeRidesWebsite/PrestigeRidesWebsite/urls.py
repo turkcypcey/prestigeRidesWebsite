@@ -21,6 +21,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('prestigeRidesWebsite.PrestigeRidesWebsite.apps.public.urls')),
+    path('', views.index, name="index"),
+    path('aboutUs', views.aboutUs, name="aboutUs"),
+    path('brands', views.brands, name="brands"),
+    path('contactUs', views.contactUs, name="contactUs")
    
 ]

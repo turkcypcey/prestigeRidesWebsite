@@ -1,10 +1,13 @@
 <div>
     {% url 'index' as index_url %}
-    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'index' %}">Home</a></span>
+    <span>{% if request.path == index_url %}Home{% else %}<a href="{{ index_url }}">Home</a>{% endif %}</span>
+    
     {% url 'aboutUs' as aboutUs_url %}
-    <span><a href="{% url 'aboutUs' %}">About Us</a></span>
+    <span>{% if request.path == aboutUs_url %}About Us{% else %}<a href="{{ aboutUs_url }}">About Us</a>{% endif %}</span>
+    
     {% url 'brands' as brands_url %}
-    <span><a href="{% url 'brands' %}">Brands</a></span>
+    <span>{% if request.path == brands_url %}Brands{% else %}<a href="{{ brands_url }}">Brands</a>{% endif %}</span>
+    
     {% url 'contactUs' as contactUs_url %}
-    <span><a href="{% url 'contactUs' %}">Contact Us</a></span>
+    <span>{% if request.path == contactUs_url %}Contact Us{% else %}<a href="{{ contactUs_url }}">Contact Us</a>{% endif %}</span>
 </div>
